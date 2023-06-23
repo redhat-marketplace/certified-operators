@@ -143,8 +143,8 @@ metadata:
     capabilities: Seamless Upgrades
     categories: Developer Tools
     certified: "true"
-    containerImage: quay.io/rh-marketplace/ibm-metrics-operator@sha256:c84f91fa5c4e6f5c90cfda5843c4f9669053daf50cc9ef73fe5d9b548e3adb40
-    createdAt: "2023-06-23T06:41:15Z"
+    containerImage: quay.io/rh-marketplace/ibm-metrics-operator@sha256:d0bfd83f751c22c41a6e410012e6840a26dc9e1debbe916a3c1e7644227eec4b
+    createdAt: "2023-06-23T12:50:52Z"
     description: The IBM Metrics Operator provides workload metering and reporting for IBM and Red Hat Marketplace customers.
     olm.skipRange: '>=1.0.0 <2.11.0'
     operatorframework.io/suggested-namespace: redhat-marketplace
@@ -455,15 +455,15 @@ spec:
             template:
               metadata:
                 annotations:
-                  authcheckImage: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:6988eba692ab3b46e136d3084a8dc3bca67880dea941bd25fc5852ab3ca6c3c1
-                  dqLiteImage: quay.io/rh-marketplace/redhat-marketplace-data-service@sha256:b28c86a22480cb7387223e8ebd6945bb37bbc017ef0b3d138a8eb10318141042
-                  metricStateImage: quay.io/rh-marketplace/redhat-marketplace-metric-state@sha256:837f4111bd8261ed399498d82c6411fdce6be8f804d3ecbe3345d488bf51ef78
-                  operatorImage: quay.io/rh-marketplace/ibm-metrics-operator@sha256:c84f91fa5c4e6f5c90cfda5843c4f9669053daf50cc9ef73fe5d9b548e3adb40
+                  authcheckImage: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:4432f807fa6716a019b058c2f42f1532e0a0a4434a603b034147e5a2ccc070d0
+                  dqLiteImage: quay.io/rh-marketplace/redhat-marketplace-data-service@sha256:095aa4ed12b699796956467b9819d16dbd57a91d98fc3b9bf0efbf18c3af5542
+                  metricStateImage: quay.io/rh-marketplace/redhat-marketplace-metric-state@sha256:eb4c221d72d1034a96b2d35538e9e9aba93de16db76dde124e05f5b6cbb511fa
+                  operatorImage: quay.io/rh-marketplace/ibm-metrics-operator@sha256:d0bfd83f751c22c41a6e410012e6840a26dc9e1debbe916a3c1e7644227eec4b
                   productID: 36cdaba810c348c096b85800dd62bcf1
                   productMetric: FREE
                   productName: Red Hat Marketplace Operator
                   rbacProxyImage: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db
-                  reporterImage: quay.io/rh-marketplace/redhat-marketplace-reporter@sha256:d2a1bdf0ce2d26fa8aa9711d052873a08d4b78dc59d1f37e122caf662a3b8b08
+                  reporterImage: quay.io/rh-marketplace/redhat-marketplace-reporter@sha256:f8931770d58d40dd4c5bf5b2c259bf2fa7fd357cb6c8e12525888e8fc06dedaa
                 labels:
                   app.kubernetes.io/instance: controller-manager
                   app.kubernetes.io/managed-by: operator
@@ -496,15 +496,15 @@ spec:
                       - name: OPERATOR_NAME
                         value: redhat-marketplace-operator
                       - name: RELATED_IMAGE_AUTHCHECK
-                        value: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:6988eba692ab3b46e136d3084a8dc3bca67880dea941bd25fc5852ab3ca6c3c1
+                        value: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:4432f807fa6716a019b058c2f42f1532e0a0a4434a603b034147e5a2ccc070d0
                       - name: RELATED_IMAGE_DQLITE
-                        value: quay.io/rh-marketplace/redhat-marketplace-data-service@sha256:b28c86a22480cb7387223e8ebd6945bb37bbc017ef0b3d138a8eb10318141042
+                        value: quay.io/rh-marketplace/redhat-marketplace-data-service@sha256:095aa4ed12b699796956467b9819d16dbd57a91d98fc3b9bf0efbf18c3af5542
                       - name: RELATED_IMAGE_KUBE_RBAC_PROXY
                         value: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db
                       - name: RELATED_IMAGE_METRIC_STATE
-                        value: quay.io/rh-marketplace/redhat-marketplace-metric-state@sha256:837f4111bd8261ed399498d82c6411fdce6be8f804d3ecbe3345d488bf51ef78
+                        value: quay.io/rh-marketplace/redhat-marketplace-metric-state@sha256:eb4c221d72d1034a96b2d35538e9e9aba93de16db76dde124e05f5b6cbb511fa
                       - name: RELATED_IMAGE_REPORTER
-                        value: quay.io/rh-marketplace/redhat-marketplace-reporter@sha256:d2a1bdf0ce2d26fa8aa9711d052873a08d4b78dc59d1f37e122caf662a3b8b08
+                        value: quay.io/rh-marketplace/redhat-marketplace-reporter@sha256:f8931770d58d40dd4c5bf5b2c259bf2fa7fd357cb6c8e12525888e8fc06dedaa
                       - name: IBMCATALOGSOURCE
                         value: "true"
                       - name: WATCH_NAMESPACE
@@ -535,7 +535,7 @@ spec:
                         valueFrom:
                           fieldRef:
                             fieldPath: metadata.annotations['olm.operatorGroup']
-                    image: quay.io/rh-marketplace/ibm-metrics-operator@sha256:c84f91fa5c4e6f5c90cfda5843c4f9669053daf50cc9ef73fe5d9b548e3adb40
+                    image: quay.io/rh-marketplace/ibm-metrics-operator@sha256:d0bfd83f751c22c41a6e410012e6840a26dc9e1debbe916a3c1e7644227eec4b
                     livenessProbe:
                       httpGet:
                         path: /healthz
@@ -1162,30 +1162,30 @@ spec:
   provider:
     name: Red Hat Marketplace
   relatedImages:
-    - image: quay.io/rh-marketplace/redhat-marketplace-data-service@sha256:b28c86a22480cb7387223e8ebd6945bb37bbc017ef0b3d138a8eb10318141042
-      name: dqlite
-    - image: quay.io/rh-marketplace/ibm-metrics-operator@sha256:c84f91fa5c4e6f5c90cfda5843c4f9669053daf50cc9ef73fe5d9b548e3adb40
-      name: manager
-    - image: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:6988eba692ab3b46e136d3084a8dc3bca67880dea941bd25fc5852ab3ca6c3c1
+    - image: quay.io/rh-marketplace/ibm-metrics-operator@sha256:d0bfd83f751c22c41a6e410012e6840a26dc9e1debbe916a3c1e7644227eec4b
+      name: ibm-metrics-operator-d0bfd83f751c22c41a6e410012e6840a26dc9e1debbe916a3c1e7644227eec4b-annotation
+    - image: quay.io/rh-marketplace/redhat-marketplace-metric-state@sha256:eb4c221d72d1034a96b2d35538e9e9aba93de16db76dde124e05f5b6cbb511fa
+      name: redhat-marketplace-metric-state-eb4c221d72d1034a96b2d35538e9e9aba93de16db76dde124e05f5b6cbb511fa-annotation
+    - image: quay.io/rh-marketplace/redhat-marketplace-data-service@sha256:095aa4ed12b699796956467b9819d16dbd57a91d98fc3b9bf0efbf18c3af5542
+      name: redhat-marketplace-data-service-095aa4ed12b699796956467b9819d16dbd57a91d98fc3b9bf0efbf18c3af5542-annotation
+    - image: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:4432f807fa6716a019b058c2f42f1532e0a0a4434a603b034147e5a2ccc070d0
       name: authcheck
-    - image: quay.io/rh-marketplace/redhat-marketplace-data-service@sha256:b28c86a22480cb7387223e8ebd6945bb37bbc017ef0b3d138a8eb10318141042
-      name: redhat-marketplace-data-service-b28c86a22480cb7387223e8ebd6945bb37bbc017ef0b3d138a8eb10318141042-annotation
-    - image: quay.io/rh-marketplace/redhat-marketplace-reporter@sha256:d2a1bdf0ce2d26fa8aa9711d052873a08d4b78dc59d1f37e122caf662a3b8b08
-      name: redhat-marketplace-reporter-d2a1bdf0ce2d26fa8aa9711d052873a08d4b78dc59d1f37e122caf662a3b8b08-annotation
-    - image: quay.io/rh-marketplace/redhat-marketplace-metric-state@sha256:837f4111bd8261ed399498d82c6411fdce6be8f804d3ecbe3345d488bf51ef78
-      name: redhat-marketplace-metric-state-837f4111bd8261ed399498d82c6411fdce6be8f804d3ecbe3345d488bf51ef78-annotation
+    - image: quay.io/rh-marketplace/redhat-marketplace-metric-state@sha256:eb4c221d72d1034a96b2d35538e9e9aba93de16db76dde124e05f5b6cbb511fa
+      name: metric_state
+    - image: quay.io/rh-marketplace/redhat-marketplace-reporter@sha256:f8931770d58d40dd4c5bf5b2c259bf2fa7fd357cb6c8e12525888e8fc06dedaa
+      name: redhat-marketplace-reporter-f8931770d58d40dd4c5bf5b2c259bf2fa7fd357cb6c8e12525888e8fc06dedaa-annotation
+    - image: quay.io/rh-marketplace/ibm-metrics-operator@sha256:d0bfd83f751c22c41a6e410012e6840a26dc9e1debbe916a3c1e7644227eec4b
+      name: manager
+    - image: quay.io/rh-marketplace/redhat-marketplace-reporter@sha256:f8931770d58d40dd4c5bf5b2c259bf2fa7fd357cb6c8e12525888e8fc06dedaa
+      name: reporter
+    - image: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:4432f807fa6716a019b058c2f42f1532e0a0a4434a603b034147e5a2ccc070d0
+      name: redhat-marketplace-authcheck-4432f807fa6716a019b058c2f42f1532e0a0a4434a603b034147e5a2ccc070d0-annotation
+    - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db
+      name: ose-kube-rbac-proxy-da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db-annotation
     - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db
       name: kube-rbac-proxy
     - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db
       name: kube_rbac_proxy
-    - image: quay.io/rh-marketplace/redhat-marketplace-reporter@sha256:d2a1bdf0ce2d26fa8aa9711d052873a08d4b78dc59d1f37e122caf662a3b8b08
-      name: reporter
-    - image: quay.io/rh-marketplace/redhat-marketplace-metric-state@sha256:837f4111bd8261ed399498d82c6411fdce6be8f804d3ecbe3345d488bf51ef78
-      name: metric_state
-    - image: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:6988eba692ab3b46e136d3084a8dc3bca67880dea941bd25fc5852ab3ca6c3c1
-      name: redhat-marketplace-authcheck-6988eba692ab3b46e136d3084a8dc3bca67880dea941bd25fc5852ab3ca6c3c1-annotation
-    - image: quay.io/rh-marketplace/ibm-metrics-operator@sha256:c84f91fa5c4e6f5c90cfda5843c4f9669053daf50cc9ef73fe5d9b548e3adb40
-      name: ibm-metrics-operator-c84f91fa5c4e6f5c90cfda5843c4f9669053daf50cc9ef73fe5d9b548e3adb40-annotation
-    - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db
-      name: ose-kube-rbac-proxy-da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db-annotation
+    - image: quay.io/rh-marketplace/redhat-marketplace-data-service@sha256:095aa4ed12b699796956467b9819d16dbd57a91d98fc3b9bf0efbf18c3af5542
+      name: dqlite
   version: 2.11.0
