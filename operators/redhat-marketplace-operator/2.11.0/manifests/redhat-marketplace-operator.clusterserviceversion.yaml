@@ -7,7 +7,7 @@ metadata:
     categories: Developer Tools
     certified: "true"
     containerImage: quay.io/rh-marketplace/redhat-marketplace-operator@sha256:d2f85aaf2b69240e4e734a3d07c8be3e9674e01f2814af1582136217ccb6b87b
-    createdAt: "2023-06-23T07:06:51Z"
+    createdAt: "2023-06-23T09:58:54Z"
     description: The Red Hat Marketplace Deployment Operator by IBM provides cluster management, metering and operator installation for Red Hat Marketplace customers.
     olm.skipRange: '>=1.0.0 <2.11.0'
     operatorframework.io/suggested-namespace: redhat-marketplace
@@ -700,23 +700,23 @@ spec:
     name: Red Hat Marketplace
   relatedImages:
     - image: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:6988eba692ab3b46e136d3084a8dc3bca67880dea941bd25fc5852ab3ca6c3c1
-      name: redhat-marketplace-authcheck-6988eba692ab3b46e136d3084a8dc3bca67880dea941bd25fc5852ab3ca6c3c1-annotation
-    - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db
-      name: ose-kube-rbac-proxy-da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db-annotation
-    - image: us.icr.io/armada-master/remoteresource@sha256:390ea3e6020c15084c680cd93ada9ae56bb13099957253b71b286008170934bb
-      name: remoteresource-390ea3e6020c15084c680cd93ada9ae56bb13099957253b71b286008170934bb-annotation
-    - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db
-      name: kube-rbac-proxy
-    - image: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:6988eba692ab3b46e136d3084a8dc3bca67880dea941bd25fc5852ab3ca6c3c1
       name: authcheck
-    - image: quay.io/rh-marketplace/redhat-marketplace-operator@sha256:d2f85aaf2b69240e4e734a3d07c8be3e9674e01f2814af1582136217ccb6b87b
-      name: redhat-marketplace-operator-d2f85aaf2b69240e4e734a3d07c8be3e9674e01f2814af1582136217ccb6b87b-annotation
+    - image: quay.io/rh-marketplace/redhat-marketplace-authcheck@sha256:6988eba692ab3b46e136d3084a8dc3bca67880dea941bd25fc5852ab3ca6c3c1
+      name: redhat-marketplace-authcheck-6988eba692ab3b46e136d3084a8dc3bca67880dea941bd25fc5852ab3ca6c3c1-annotation
     - image: quay.io/rh-marketplace/redhat-marketplace-operator@sha256:d2f85aaf2b69240e4e734a3d07c8be3e9674e01f2814af1582136217ccb6b87b
       name: manager
     - image: us.icr.io/armada-master/watch-keeper@sha256:f6dc522d7440f7047df6015d594517bc748e999c064c3fd727c89aa604d826cf
       name: rhm_watch_keeper_deployment
     - image: us.icr.io/armada-master/remoteresource@sha256:390ea3e6020c15084c680cd93ada9ae56bb13099957253b71b286008170934bb
-      name: rhm_rrs3_deployment
+      name: remoteresource-390ea3e6020c15084c680cd93ada9ae56bb13099957253b71b286008170934bb-annotation
     - image: us.icr.io/armada-master/watch-keeper@sha256:f6dc522d7440f7047df6015d594517bc748e999c064c3fd727c89aa604d826cf
       name: watch-keeper-f6dc522d7440f7047df6015d594517bc748e999c064c3fd727c89aa604d826cf-annotation
+    - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db
+      name: ose-kube-rbac-proxy-da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db-annotation
+    - image: registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:da5d5061dbc2ec5082cf14b6c600fb5400b83cf91d7ccebfa80680a238d275db
+      name: kube-rbac-proxy
+    - image: us.icr.io/armada-master/remoteresource@sha256:390ea3e6020c15084c680cd93ada9ae56bb13099957253b71b286008170934bb
+      name: rhm_rrs3_deployment
+    - image: quay.io/rh-marketplace/redhat-marketplace-operator@sha256:d2f85aaf2b69240e4e734a3d07c8be3e9674e01f2814af1582136217ccb6b87b
+      name: redhat-marketplace-operator-d2f85aaf2b69240e4e734a3d07c8be3e9674e01f2814af1582136217ccb6b87b-annotation
   version: 2.11.0
